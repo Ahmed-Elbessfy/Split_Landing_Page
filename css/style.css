@@ -1,0 +1,183 @@
+/* Start General Rules */
+
+:root {
+    --main-bg-color: #333;
+    --first-bg-color: rgba(232, 232, 232, 0.7);
+    --first-btn-hover-color: rgba(165, 165, 165, 0.3);
+    --second-bg-color: rgba(43, 43, 43, 0.8);
+    --second-btn-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 70%;
+    --other-width: 30%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Josefin Slab', 'Helvetica', 'Arial', "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    /*
+    height: 100%;
+    width: 100%;
+*/
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* End General Rules */
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    position: relative;
+}
+
+section {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-gap: 4rem;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+.first {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom right, var(--first-bg-color), var(--first-bg-color)), url('../media/pexels-photo-196645.jpeg') center center no-repeat;
+    background-size: cover;
+}
+
+.second {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to bottom right, var(--second-bg-color), var(--second-bg-color)), url('../media/headerbg.png') center center no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    /*
+    to create a text with image background
+    
+    background-image: url('https://images.pexels.com/photos/356807/pexels-photo-356807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    font: 3rem/.85 'Fredericka the Great', open Sans;
+    text-transform: uppercase;
+    background-size: cover;
+    text-align: center;
+    background-repeat:repeat;
+    background-position: center center;
+    background-position: right bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+*/
+    font-size: 3rem;
+    font-family: 'Fredericka the Great', "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.first h1 {
+    color: #000;
+}
+
+.btn {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    border: #fff 2px solid;
+    width: 12rem;
+    display: block;
+    text-align: center;
+    padding: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.first .btn {
+    color: #000;
+    border-color: #000;
+}
+
+.first .btn:hover {
+    background-color: var(--first-btn-hover-color);
+    border-color: var(--first-btn-hover-color);
+}
+
+.second .btn:hover {
+    background-color: var(--second-btn-hover-color);
+    border-color: var(--second-btn-hover-color);
+}
+
+.hover-first .first {
+    width: var(--hover-width);
+}
+
+.hover-first .second {
+    width: var(--other-width);
+    opacity: 0.4;
+}
+
+.hover-second .second {
+    width: var(--hover-width);
+}
+
+.hover-second .first {
+    width: var(--other-width);
+    opacity: 0.4;
+}
+
+@media (max-width:850px) {
+    section {
+        width: 100%;
+        height: 50%;
+    }
+    .first {
+        top: 0;
+    }
+    .second {
+        /*        top: 50%;*/
+        bottom: 0;
+    }
+    .hover-first .first {
+        height: var(--hover-width);
+        width: 100%;
+    }
+
+    .hover-first .second {
+        height: var(--other-width);
+        opacity: 0.4;
+        width: 100%;
+        /*        top:70%;*/
+    }
+
+    .hover-second .second {
+        height: var(--hover-width);
+        width: 100%;
+        /*        top:30%;*/
+    }
+
+    .hover-second .first {
+        height: var(--other-width);
+        width: 100%;
+        opacity: 0.4;
+    }
+
+
+}
