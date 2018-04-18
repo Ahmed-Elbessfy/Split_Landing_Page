@@ -54,6 +54,7 @@ section {
     -moz-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     overflow: hidden;
+    padding: 4rem;;
 }
 
 .first {
