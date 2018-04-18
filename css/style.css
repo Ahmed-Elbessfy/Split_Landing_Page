@@ -85,7 +85,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 */
-    font-size: 3rem;
+    font-size: 4.2rem;
     font-family: 'Fredericka the Great', "Helvetica Neue", Helvetica, sans-serif;
     color: #fff;
     font-weight: 500;
@@ -143,17 +143,11 @@ h1 {
     opacity: 0.4;
 }
 
-@media (max-width:850px) {
+@media (max-width:950px) {
     section {
+        position: static;
         width: 100%;
         height: 50%;
-    }
-    .first {
-        top: 0;
-    }
-    .second {
-        /*        top: 50%;*/
-        bottom: 0;
     }
     .hover-first .first {
         height: var(--hover-width);
@@ -162,21 +156,17 @@ h1 {
 
     .hover-first .second {
         height: var(--other-width);
-        opacity: 0.4;
         width: 100%;
-        /*        top:70%;*/
     }
 
     .hover-second .second {
         height: var(--hover-width);
         width: 100%;
-        /*        top:30%;*/
     }
 
     .hover-second .first {
         height: var(--other-width);
         width: 100%;
-        opacity: 0.4;
     }
 
 
